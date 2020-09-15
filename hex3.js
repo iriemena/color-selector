@@ -1,20 +1,22 @@
+let color = [1, 2, 3, 4, 5, 6, 7, 8, 9, "a", "b", "c", "d", "e", "f"];
+
 let btn = document.getElementById("btn");
 let display = document.getElementById("span");
 let hamburger = document.querySelector(".bar");
 let nav = document.querySelector(".nav-link");
 
 btn.addEventListener("click", function () {
-  const color1 = colors();
-  const color2 = colors();
-  const color3 = colors();
+  let randomColor = "#";
+  for (let i = 0; i < 3; i++) {
+    randomColor += color[colors()];
+  }
 
-  let randomColor = `rgb(${color1}, ${color2}, ${color3})`;
-  document.body.style.backgroundColor = randomColor;
-  display.innerHTML = randomColor;
+  document.body.style.background = randomColor;
+  display.innerText = randomColor;
 });
 
 function colors() {
-  return Math.floor(Math.random() * 256);
+  return Math.floor(Math.random() * color.length);
 }
 
 hamburger.addEventListener("click", function (e) {
