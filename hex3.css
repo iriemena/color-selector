@@ -43,6 +43,11 @@ button {
 .nav-center h1 {
   color: #62a515;
 }
+#btn{
+  font-size: 1.2rem;
+  text-transform: capitalize;
+  color: #64e
+}
 
 .nav-link {
   list-style: none;
